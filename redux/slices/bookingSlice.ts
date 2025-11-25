@@ -1,9 +1,24 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 
-export type Booking = {
+// export type Booking = {
+//   source: string;
+//   destination: string;
+//   car: string;
+//   tripType: string; 
+//   distance: number;
+//   duration: number;
+//   fare: number | null;
+//   pickupDate: string;
+//   pickupTime: string;
+//   passengerName: string;
+//   phone: string;
+// };
+
+export interface Booking {
   source: string;
   destination: string;
   car: string;
+  tripType: "oneway" | "twoway"; // ⬅️ ADD THIS
   distance: number;
   duration: number;
   fare: number | null;
@@ -11,7 +26,8 @@ export type Booking = {
   pickupTime: string;
   passengerName: string;
   phone: string;
-};
+}
+
 
 type BookingState = {
   bookings: Booking[];
