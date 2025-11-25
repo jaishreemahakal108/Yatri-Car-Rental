@@ -18,7 +18,7 @@ export interface Booking {
   source: string;
   destination: string;
   car: string;
-  tripType: "oneway" | "twoway"; // ⬅️ ADD THIS
+  tripType: "oneway" | "twoway"; 
   distance: number;
   duration: number;
   fare: number | null;
