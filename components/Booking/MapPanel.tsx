@@ -3,28 +3,61 @@
 import React, { useEffect, useState } from "react";
 import dynamic from "next/dynamic";
 import "../Map/leaflet.css.js";
+import type {
+  MapContainerProps,
+  TileLayerProps,
+  MarkerProps,
+  PolylineProps,
+  PopupProps,
+} from "react-leaflet";
 
 // Dynamic imports (Leaflet SSR fix)
+// const MapContainer = dynamic(
+//   async () => (await import("react-leaflet")).MapContainer,
+//   { ssr: false }
+// );
+// const TileLayer = dynamic(
+//   async () => (await import("react-leaflet")).TileLayer,
+//   { ssr: false }
+// );
+// const Marker = dynamic(
+//   async () => (await import("react-leaflet")).Marker,
+//   { ssr: false }
+// );
+// const Polyline = dynamic(
+//   async () => (await import("react-leaflet")).Polyline,
+//   { ssr: false }
+// );
+// const Popup = dynamic(
+//   async () => (await import("react-leaflet")).Popup,
+//   { ssr: false }
+// );
+
+// Fully typed dynamic imports
 const MapContainer = dynamic(
   async () => (await import("react-leaflet")).MapContainer,
   { ssr: false }
-);
+) as unknown as React.FC<MapContainerProps>;
+
 const TileLayer = dynamic(
   async () => (await import("react-leaflet")).TileLayer,
   { ssr: false }
-);
+) as unknown as React.FC<TileLayerProps>;
+
 const Marker = dynamic(
   async () => (await import("react-leaflet")).Marker,
   { ssr: false }
-);
+) as unknown as React.FC<MarkerProps>;
+
 const Polyline = dynamic(
   async () => (await import("react-leaflet")).Polyline,
   { ssr: false }
-);
+) as unknown as React.FC<PolylineProps>;
+
 const Popup = dynamic(
   async () => (await import("react-leaflet")).Popup,
   { ssr: false }
-);
+) as unknown as React.FC<PopupProps>;
 
 // Leaflet for icons/polyline etc
 let L: any;
