@@ -1,0 +1,161 @@
+/* Container */
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 80px 20px;
+  font-family: "Inter", sans-serif;
+}
+
+/* Hero */
+.hero {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.title {
+  font-size: 3rem;
+  font-weight: 800;
+  background: linear-gradient(90deg, #ff7a18, #af002d);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.subtitle {
+  margin-top: 10px;
+  color: #6f6f6f;
+  font-size: 1.2rem;
+}
+
+/* GRID */
+.grid {
+  display: grid;
+  grid-template-columns: 1.7fr 1fr;
+  gap: 40px;
+}
+
+/* Cards */
+.formCard,
+.infoCard {
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(12px);
+  padding: 35px;
+  border-radius: 18px;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.08);
+  transition: 0.25s ease;
+}
+
+.formCard:hover,
+.infoCard:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.12);
+}
+
+/* Card Title */
+.cardTitle {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 25px;
+  background: linear-gradient(90deg, #ff7a18, #af002d);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+/* Floating Input Fields */
+.field {
+  position: relative;
+  margin-bottom: 25px;
+}
+
+.field input,
+.field textarea {
+  width: 100%;
+  padding: 16px 14px;
+  border-radius: 12px;
+  border: 1.5px solid #ddd;
+  font-size: 1rem;
+  transition: all 0.2s ease;
+  background: #fafafa;
+}
+
+.field input:focus,
+.field textarea:focus {
+  border-color: #ff7a18;
+  box-shadow: 0 0 0 2px rgba(255, 122, 24, 0.2);
+  background: #fff;
+}
+
+.field label {
+  position: absolute;
+  left: 16px;
+  top: 14px;
+  color: #777;
+  pointer-events: none;
+  transition: 0.25s ease;
+}
+
+/* Floating Effect */
+.field input:focus + label,
+.field input:not(:placeholder-shown) + label,
+.field textarea:focus + label,
+.field textarea:not(:placeholder-shown) + label {
+  top: -8px;
+  left: 12px;
+  font-size: 0.75rem;
+  background: white;
+  padding: 0 4px;
+  color: #ff7a18;
+}
+
+/* BUTTON */
+.button {
+  margin-top: 10px;
+  background: linear-gradient(90deg, #ff7a18, #af002d);
+  color: white;
+  padding: 14px;
+  border: none;
+  width: 100%;
+  font-size: 1.1rem;
+  border-radius: 12px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.25s ease;
+}
+
+.button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 30px rgba(175, 0, 45, 0.35);
+}
+
+/* INFO ITEMS */
+.infoItem {
+  display: flex;
+  gap: 12px;
+  padding: 10px 0;
+  font-size: 1.1rem;
+  color: #444;
+}
+
+.infoItem span {
+  font-size: 1.4rem;
+}
+
+/* Map */
+.mapWrapper {
+  margin-top: 25px;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.map {
+  width: 100%;
+  height: 220px;
+  border: none;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}

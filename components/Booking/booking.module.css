@@ -1,0 +1,106 @@
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 20px;
+}
+
+.left {
+  width: 45%;
+  padding: 26px;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(15px);
+  box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.left:hover {
+  box-shadow: 0 8px 40px rgba(108,71,255,0.4);
+}
+
+.heading {
+  margin-bottom: 15px;
+  color: #222;
+  font-weight: 700;
+  font-size: 24px;
+}
+
+.glowHeading {
+  font-size: 22px;
+  color: #00b894;
+  text-align: center;
+  margin-bottom: 15px;
+  text-shadow: 0px 0px 8px rgba(0,255,204,0.7);
+}
+
+.left input,
+.left select {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid #e3e3e3;
+  border-radius: 8px;
+  margin-bottom: 12px;
+  transition: all 0.2s ease;
+}
+
+.left input:focus,
+.left select:focus {
+  border-color: #6c47ff;
+  box-shadow: 0 0 8px rgba(108,71,255,0.4);
+}
+
+.routeInfo, .fareBox {
+  background: #f6f8fc;
+  padding: 14px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.calculateBtn, .btn {
+  width: 100%;
+  padding: 14px;
+  border-radius: 10px;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.calculateBtn {
+  background: linear-gradient(135deg, #6c47ff, #8148ff);
+  color: #fff;
+}
+
+.btn {
+  background: linear-gradient(135deg, #00b894, #01dca6);
+  color: #fff;
+}
+
+.right {
+  width: 50%;
+  height: 600px;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+}
+
+/* Booking Cards */
+.bookingsContainer {
+  width: 100%;
+  margin-top: 30px;
+}
+
+.bookingsGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+
+.bookingCard {
+  background: linear-gradient(145deg, #ffffff, #f0f0f0);
+  padding: 18px;
+  border-radius: 14px;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+  transition: all 0.3s ease;
+}
